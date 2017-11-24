@@ -109,7 +109,7 @@ var add = function(){
         $('#infomodal').attr('hidden', true);
 
         $.ajax({
-            url: '/service/add',
+            url: 'http://www.jiayibilin.com/api-webmanage/service/add',
             data: {
                 name: $('input[name="a_name"]').val(),
                 content: $('#a_content').val(),
@@ -170,7 +170,7 @@ var edit = function(){
         }
 
         $.ajax({
-                url: '/service/edit',
+                url: 'http://www.jiayibilin.com/api-webmanage/service/edit',
                 data: param,
                 success: function(res) {
                     console.log('edit');
@@ -188,7 +188,7 @@ var edit = function(){
 var del = function(id){
 
     $.ajax({
-        url: '/service/del',
+        url: 'http://www.jiayibilin.com/api-webmanage/service/del',
         data: {
             id: id
             },
@@ -203,7 +203,7 @@ var del = function(id){
 var changeStatus = function(id, status){
 
     $.ajax({
-            url: '/service/changeStatus',
+            url: 'http://www.jiayibilin.com/api-webmanage/service/changeStatus',
             data: {
                 id: id,
                 status: status

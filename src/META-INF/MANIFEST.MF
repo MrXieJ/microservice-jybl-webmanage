@@ -1,0 +1,56 @@
+Manifest-Version: 1.0
+Class-Path: mybatis-3.4.5.jar rxnetty-contexts-0.4.9.jar snakeyaml-1.1
+ 7.jar shiro-lang-1.4.0.jar xmlpull-1.1.3.1.jar commons-lang-2.6.jar s
+ pring-aop-4.3.11.RELEASE.jar eureka-core-1.6.2.jar logback-core-1.1.1
+ 1.jar spring-security-crypto-4.2.3.RELEASE.jar classmate-1.3.4.jar lo
+ g4j-over-slf4j-1.7.25.jar netty-buffer-4.0.27.Final.jar guava-18.0.ja
+ r netty-codec-4.0.27.Final.jar gson-2.8.1.jar spring-tx-4.3.11.RELEAS
+ E.jar ribbon-eureka-2.2.2.jar HdrHistogram-2.1.9.jar jersey-core-1.19
+ .1.jar rxjava-1.1.10.jar guice-4.1.0.jar shiro-config-core-1.4.0.jar 
+ validation-api-1.1.0.Final.jar jackson-annotations-2.8.0.jar bcpkix-j
+ dk15on-1.55.jar spring-jdbc-4.3.11.RELEASE.jar ribbon-httpclient-2.2.
+ 2.jar shiro-crypto-cipher-1.4.0.jar spring-boot-starter-1.5.7.RELEASE
+ .jar spring-boot-devtools-1.5.7.RELEASE.jar mybatis-spring-boot-start
+ er-1.3.1.jar aliyun-java-sdk-dysmsapi-1.0.0-SANPSHOT.jar eureka-clien
+ t-1.6.2.jar lombok-1.16.18.jar antlr-runtime-3.4.jar spring-cloud-sta
+ rter-1.2.2.RELEASE.jar netflix-eventbus-0.3.0.jar spring-cloud-contex
+ t-1.2.2.RELEASE.jar mysql-connector-java-5.1.44.jar joda-time-2.9.9.j
+ ar spring-boot-autoconfigure-1.5.7.RELEASE.jar woodstox-core-asl-4.4.
+ 1.jar jcl-over-slf4j-1.7.25.jar commons-math-2.2.jar shiro-cache-1.4.
+ 0.jar spring-cloud-netflix-core-1.3.1.RELEASE.jar netty-transport-4.0
+ .27.Final.jar shiro-core-1.4.0.jar hystrix-core-1.5.12.jar spring-boo
+ t-1.5.7.RELEASE.jar aliyun-sdk-mns-1.1.8.jar commons-configuration-1.
+ 8.jar commons-beanutils-1.9.3.jar spring-beans-4.3.11.RELEASE.jar net
+ ty-transport-native-epoll-4.0.27.Final.jar netty-handler-4.0.27.Final
+ .jar ribbon-loadbalancer-2.2.2.jar spring-boot-starter-logging-1.5.7.
+ RELEASE.jar jackson-databind-2.8.10.jar servo-core-0.10.1.jar tomcat-
+ jdbc-8.5.20.jar xpp3_min-1.1.4c.jar fastjson-1.2.39.jar netty-common-
+ 4.0.27.Final.jar jsr311-api-1.1.1.jar tools.jar commons-jxpath-1.3.ja
+ r javax.inject-1.jar tomcat-embed-websocket-8.5.20.jar shiro-event-1.
+ 4.0.jar jconsole.jar spring-security-rsa-1.0.3.RELEASE.jar spring-web
+ mvc-4.3.11.RELEASE.jar jul-to-slf4j-1.7.25.jar jettison-1.3.7.jar net
+ ty-codec-http-4.0.27.Final.jar shiro-crypto-hash-1.4.0.jar rxnetty-se
+ rvo-0.4.9.jar netflix-statistics-0.1.1.jar netflix-commons-util-0.1.1
+ .jar spring-context-4.3.11.RELEASE.jar tomcat-juli-8.5.20.jar shiro-c
+ rypto-core-1.4.0.jar commons-codec-1.10.jar spring-expression-4.3.11.
+ RELEASE.jar ribbon-transport-2.2.2.jar druid-1.1.4.jar xstream-1.4.9.
+ jar slf4j-api-1.7.25.jar hibernate-validator-5.3.5.Final.jar commons-
+ collections-3.2.2.jar shiro-config-ogdl-1.4.0.jar archaius-core-0.7.4
+ .jar spring-boot-starter-web-1.5.7.RELEASE.jar httpcore-4.4.6.jar shi
+ ro-spring-1.4.0.jar spring-boot-starter-jdbc-1.5.7.RELEASE.jar jersey
+ -apache-client4-1.19.1.jar stax-api-1.0.1.jar httpclient-4.5.3.jar to
+ mcat-embed-core-8.5.20.jar spring-web-4.3.11.RELEASE.jar jboss-loggin
+ g-3.3.1.Final.jar ribbon-core-2.2.2.jar bcprov-jdk15on-1.55.jar logba
+ ck-classic-1.1.11.jar mybatis-spring-1.3.1.jar jersey-client-1.19.1.j
+ ar jackson-core-2.8.10.jar shiro-web-1.4.0.jar spring-cloud-starter-r
+ ibbon-1.3.1.RELEASE.jar spring-cloud-starter-archaius-1.3.1.RELEASE.j
+ ar netflix-infix-0.3.0.jar stax2-api-3.1.4.jar stax-api-1.0-2.jar ali
+ yun-java-sdk-core-3.2.3.jar mybatis-spring-boot-autoconfigure-1.3.1.j
+ ar aopalliance-1.0.jar spring-boot-starter-tomcat-1.5.7.RELEASE.jar s
+ pring-core-4.3.11.RELEASE.jar stringtemplate-3.2.1.jar tomcat-embed-e
+ l-8.5.20.jar spring-cloud-commons-1.2.2.RELEASE.jar spring-cloud-netf
+ lix-eureka-client-1.3.1.RELEASE.jar spring-cloud-starter-eureka-1.3.1
+ .RELEASE.jar ribbon-2.2.2.jar rxnetty-0.4.9.jar servo-internal-0.10.1
+ .jar antlr-2.7.7.jar
+Main-Class: com.jybl.admin.AdminApplication
+

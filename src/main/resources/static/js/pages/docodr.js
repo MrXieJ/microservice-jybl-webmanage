@@ -9,7 +9,7 @@ layui.use('table', function(){
     table = layui.table;
     table.render({
         elem: '#odr_table',
-        url: '/order/listDoctor?phone=' + getUrlParam('phone'),
+        url: 'http://www.jiayibilin.com/api-webmanage/order/listDoctor?phone=' + getUrlParam('phone'),
         even: true,
         page: true,
         cols: [[{field:'id', title:'序号', width:90},

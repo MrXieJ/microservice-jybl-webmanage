@@ -84,7 +84,7 @@ $(function(){
         //$('#delete').attr('href', 'javascript:del(getUrlParam("phone"));');
 
         $.ajax({
-            url:"/doctor/info",
+            url:"http://www.jiayibilin.com/api-webmanage/doctor/info",
             data: {
                 phone: getUrlParam('phone')
             },
@@ -150,7 +150,7 @@ $(function(){
 
                     if (head_pic != null && practice_pic != null) {
                         if (client == null) {
-                                       OSS.urllib.request("http://125.216.243.114:2004/requestSTS",{method: 'GET'},function (err, response) {
+                                       OSS.urllib.request("http://www.jiayibilin.com/api-stsserver/requestSTS",{method: 'GET'},function (err, response) {
                                         if (err) return alert(err);
                                         try {
                                             result = JSON.parse(response);
@@ -221,7 +221,7 @@ $(function(){
                                 alert(err);
                             });
                         } else {
-                            OSS.urllib.request("http://125.216.243.114:2004/requestSTS",{method: 'GET'},function (err, response) {
+                            OSS.urllib.request("http://www.jiayibilin.com/api-stsserver/requestSTS",{method: 'GET'},function (err, response) {
                                                         if (err) return alert(err);
                                                         try {
                                                             result = JSON.parse(response);
@@ -264,7 +264,7 @@ $(function(){
                                 alert(err);
                             });
                         } else {
-                            OSS.urllib.request("http://125.216.243.114:2004/requestSTS",{method: 'GET'},function (err, response) {
+                            OSS.urllib.request("http://www.jiayibilin.com/api-stsserver/requestSTS",{method: 'GET'},function (err, response) {
                                                         if (err) return alert(err);
                                                         try {
                                                             result = JSON.parse(response);
@@ -307,7 +307,7 @@ $(function(){
         $('#primary').unbind('click').removeAttr('onclick').click(function() {
 
             if (client == null) {
-               OSS.urllib.request("http://125.216.243.114:2004/requestSTS",{method: 'GET'},function (err, response) {
+               OSS.urllib.request("http://www.jiayibilin.com/api-stsserver/requestSTS",{method: 'GET'},function (err, response) {
                 if (err) return alert(err);
                 try {
                     result = JSON.parse(response);
@@ -364,7 +364,7 @@ $(function(){
 
 var add = function(){
     $.ajax({
-        url: '/doctor/add',
+        url: 'http://www.jiayibilin.com/api-webmanage/doctor/add',
         data: {
             phone: $('input[name="phone"]').val(),
             password: $('input[name="password"]').val(),
@@ -392,7 +392,7 @@ var add = function(){
              });
              $('#info_second').html('返回');
              $('#info_second').unbind('click').removeAttr('onclick').click(function(){
-                window.location.href="docman.html";
+                window.location.href="./docman.html";
              });
              $('#infomodal').removeAttr('hidden');
 
@@ -404,7 +404,7 @@ var add = function(){
 var edit = function(param) {
 
     $.ajax({
-        url: '/doctor/edit',
+        url: 'http://www.jiayibilin.com/api-webmanage/doctor/edit',
         data: param,
         success: function(res){
 
@@ -426,7 +426,7 @@ var edit = function(param) {
             });
             $('#info_second').html('返回');
             $('#info_second').unbind('click').removeAttr('onclick').click(function(){
-                window.location.href="docman.html";
+                window.location.href="./docman.html";
             });
             $('#infomodal').removeAttr('hidden');
         }
@@ -439,7 +439,7 @@ var verify = function(phone) {
     $('#info_primary').html('审核通过');
     $('#info_primary').unbind('click').removeAttr('onclick').click(function(){
         $.ajax({
-            url: '/doctor/verify',
+            url: 'http://www.jiayibilin.com/api-webmanage/doctor/verify',
             data: {
                 phone: phone
             },
@@ -463,12 +463,12 @@ var del = function(phone) {
     $('#info_primary').html('确定');
     $('#info_primary').unbind('click').removeAttr('onclick').click(function(){
         $.ajax({
-            url: '/doctor/del',
+            url: 'http://www.jiayibilin.com/api-webmanage/doctor/del',
             data: {
                 phone: phone
             },
             success: function(res){
-                window.location.href="docman.html";
+                window.location.href="./docman.html";
             }
         })
     });

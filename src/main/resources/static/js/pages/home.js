@@ -197,7 +197,7 @@
     $(function(){
 
         $.ajax({
-            url:'/statistic/listAll',
+            url:'http://www.jiayibilin.com/api-webmanage/statistic/listAll',
             success: function(res) {
 
                 var uov = res.userOverview;

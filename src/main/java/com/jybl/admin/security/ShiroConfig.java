@@ -6,7 +6,9 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.apache.shiro.web.servlet.ShiroHttpSession;
 import org.apache.shiro.web.servlet.SimpleCookie;
+import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
@@ -39,9 +41,9 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/**", "anon");
 
         // 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
-        shiroFilterFactoryBean.setLoginUrl("/login.html");
+        shiroFilterFactoryBean.setLoginUrl("http://www.jiayibilin.com/api-webmanage/login.html");
         // 登录成功后要跳转的链接
-        shiroFilterFactoryBean.setSuccessUrl("/html/index.html");
+        //shiroFilterFactoryBean.setSuccessUrl("/html/index.html");
         //未授权界面;
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
 
@@ -51,10 +53,21 @@ public class ShiroConfig {
 
 
     @Bean
-    public DefaultWebSecurityManager securityManager(ShiroRealm shiroRealm){
-        DefaultWebSecurityManager manager =  new DefaultWebSecurityManager();
+    public DefaultWebSecurityManager securityManager(ShiroRealm shiroRealm, DefaultWebSessionManager sessionManager){
+        DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
         manager.setRealm(shiroRealm);
+        manager.setSessionManager(sessionManager);
         //manager.setRememberMeManager(rememberMeManager());
+        return manager;
+    }
+
+    @Bean
+    public DefaultWebSessionManager sessionManager(){
+        DefaultWebSessionManager manager = new DefaultWebSessionManager();
+        SimpleCookie cookie = new SimpleCookie(ShiroHttpSession.DEFAULT_SESSION_ID_NAME);
+        manager.setGlobalSessionTimeout(2592000);
+        manager.setSessionIdCookie(cookie);
+        manager.setSessionIdCookieEnabled(true);
         return manager;
     }
 

@@ -107,7 +107,7 @@
     var bpe = null;
 
     $.ajax({
-        url: '/patient/listDetail',
+        url: 'http://www.jiayibilin.com/api-webmanage/patient/listDetail',
         data: {
             wechatId: getUrlParam('wechatId')
         },
@@ -213,7 +213,7 @@
 
         table.render({
             elem: '#odr_table',
-            url: '/order/listPatient?wechatId=' + getUrlParam('wechatId'),
+            url: 'http://www.jiayibilin.com/api-webmanage/order/listPatient?wechatId=' + getUrlParam('wechatId'),
             even: true,
             page: true,
             cols: [[{field:'id', title:'序号', width:90},

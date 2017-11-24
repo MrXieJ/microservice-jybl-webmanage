@@ -62,6 +62,7 @@ public class ShiroRealm extends AuthorizingRealm {
             //System.out.println("效验更新前ROLE："+user.getRole().getRId());
             //userService.update(user,true,user.getId());
         }
+        logger.info("用户 { "+token.getUsername()+" } 通过 ");
         return new SimpleAuthenticationInfo(user,user.getPassword(),getName());
     }
 

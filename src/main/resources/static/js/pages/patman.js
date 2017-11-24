@@ -21,7 +21,7 @@ layui.use('table', function(){
           var tr = obj.tr; //获得当前行 tr 的DOM对象
 
           if(layEvent === 'detail'){
-            window.location.href="patinfo.html?wechatId=" + data.wechat_id;
+            window.location.href="./patinfo.html?wechatId=" + data.wechat_id;
           }
     });
 

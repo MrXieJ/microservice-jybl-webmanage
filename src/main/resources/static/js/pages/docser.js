@@ -12,7 +12,7 @@ layui.use('table', function(){
     table.render({
     id: 'docser_table',
     elem: '#docser_table',
-    url: '/service/listDocService?phone=' + getUrlParam('phone'),
+    url: 'http://www.jiayibilin.com/api-webmanage/service/listDocService?phone=' + getUrlParam('phone'),
     even: true,
     page: true,
     cols: [[{ field: 'rid', title: '序号', width: 100 },
@@ -52,7 +52,7 @@ layui.use('table', function(){
     t.render({
         id: 'ser_table',
         elem: '#ser_table',
-        url: '/service/listAllAvailable?phone=' + getUrlParam('phone'),
+        url: 'http://www.jiayibilin.com/api-webmanage/service/listAllAvailable?phone=' + getUrlParam('phone'),
         even: true,
         page: true,
         height: 450,
@@ -76,7 +76,7 @@ layui.use('form', function(){
 
 var changeStatus= function(id, status) {
     $.ajax({
-        url: '/service/changeDocSerStatus',
+        url: 'http://www.jiayibilin.com/api-webmanage/service/changeDocSerStatus',
         data: {
             id: id,
             status: status
@@ -104,7 +104,7 @@ $(function(){
         });
 
         $.ajax({
-                url: '/service/addDocService',
+                url: 'http://www.jiayibilin.com/api-webmanage/service/addDocService',
                 type: 'POST',
                 contentType: 'application/json',
                 data: data,

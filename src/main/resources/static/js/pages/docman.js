@@ -16,7 +16,7 @@ layui.use('table', function(){
     table.render({
         id: 'doc_table',
         elem: '#doc_table',
-        url:  '/doctor/listAll',
+        url:  'http://www.jiayibilin.com/api-webmanage/doctor/listAll',
         page: true,
         even: true,
         cols: [[{ field: 'id', title: '序号', width: 80 },
@@ -39,11 +39,11 @@ layui.use('table', function(){
         var tr = obj.tr; //获得当前行 tr 的DOM对象
 
         if(layEvent === 'service'){
-            window.location.href="docser.html?phone=" + data.phone;
+            window.location.href="./docser.html?phone=" + data.phone;
         } else if(layEvent === 'order') {
-            window.location.href="docodr.html?phone=" + data.phone;
+            window.location.href="./docodr.html?phone=" + data.phone;
         } else if(layEvent === 'edit') {
-            window.location.href="adddoc.html?phone=" + data.phone + "&edit=1";
+            window.location.href="./adddoc.html?phone=" + data.phone + "&edit=1";
         }
 
     });

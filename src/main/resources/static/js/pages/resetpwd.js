@@ -28,7 +28,7 @@ var hash = '', tamp = 0;
 var getSmsCode = function() {
 
     $.ajax({
-        url: '/user/getSmsCode',
+        url: 'http://www.jiayibilin.com/api-webmanage/user/getSmsCode',
         data: {
             phone: $('input[name="phone"]').val()
         },
@@ -66,7 +66,7 @@ var resetPwd = function() {
     }
 
     $.ajax({
-        url: '/user/resetPassword',
+        url: 'http://www.jiayibilin.com/api-webmanage/user/resetPassword',
         data: {
             phone: $('input[name="phone"]').val(),
             msgNum: $('input[name="code"]').val(),
@@ -80,7 +80,7 @@ var resetPwd = function() {
                 $("#cancel").css('display', 'inline-block');
                 $("#confirm").html('前往登录');
                 $("#confirm").unbind('click').removeAttr('onclick').click(function(){
-                    window.location.href="resetpwd.html";
+                    window.location.href="./resetpwd.html";
                 })
             } else {
                 $("#cancel").css('display', 'none');

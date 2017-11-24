@@ -37,7 +37,7 @@ layui.use('element', function(){
     $(function(){
 
             $.ajax({
-                url: '/user/info',
+                url: 'http://www.jiayibilin.com/api-webmanage/user/info',
                 data: {
                 },
                 success: function(res){
@@ -70,10 +70,10 @@ layui.use('element', function(){
             $('#cancel').css('display', 'inline-block');
             $('#confirm').unbind('click').removeAttr('onclick').click(function(){
                 $.ajax({
-                    url: '/signOut',
+                    url: 'http://www.jiayibilin.com/api-webmanage/signOut',
                     data: {},
                     complete: function(){
-                        window.location.href="../login.html";
+                        window.location.href="http://www.jiayibilin.com/api-webmanage/login.html";
                     }
                 })
             });
@@ -107,7 +107,7 @@ layui.use('element', function(){
                             alert(err);
                         });
                     } else {
-                        OSS.urllib.request("http://125.216.243.114:2004/requestSTS",{method: 'GET'},function (err, response) {
+                        OSS.urllib.request("http://www.jiayibilin.com/api-stsserver/requestSTS",{method: 'GET'},function (err, response) {
                             if (err) return alert(err);
                             try {
                                 result = JSON.parse(response);
@@ -158,7 +158,7 @@ layui.use('element', function(){
             }
 
             $.ajax({
-                url: '/user/update',
+                url: 'http://www.jiayibilin.com/api-webmanage/user/update',
                 data: param,
                 success: function(res) {
 
